@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stonefield">
+  <!-- Stonefield mark: three stacked stones (a cairn) on a field-green tile. -->
+  <rect width="64" height="64" rx="15" fill="#2F5D50"/>
+  <ellipse cx="32" cy="46.5" rx="18" ry="7.5" fill="#F4F1EA"/>
+  <ellipse cx="31" cy="33" rx="12.5" ry="6" fill="#DCD6C8"/>
+  <ellipse cx="32.5" cy="21.5" rx="7.5" ry="4.6" fill="#F4F1EA"/>
+</svg>
