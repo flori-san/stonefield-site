@@ -26,7 +26,7 @@ a:hover { text-decoration-thickness: 2px; }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 8px; background: var(--card); padding: 8px 12px; z-index: 10; }
 
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
 
 /* Header */
 .site-header { border-bottom: 1px solid var(--border); }
@@ -50,19 +50,19 @@ li { margin-bottom: 8px; }
 .card > :last-child, .card > div > :last-child { margin-bottom: 0; }
 .card.tint { background: var(--tint); border-color: transparent; }
 
-/* The product card */
-.product { display: flex; gap: 22px; align-items: flex-start; margin-top: 36px; }
-.product img { width: 88px; height: 88px; border-radius: 20px; image-rendering: pixelated; flex: none; }
-.product h2 { margin-top: 0; }
+/* The app cards: three across, one column on phones */
+.apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 36px 0 8px; }
+.app { display: flex; flex-direction: column; margin: 0; padding: 22px; }
+.app img { width: 64px; height: 64px; border-radius: 15px; margin-bottom: 14px; }
+.app img.pixel { image-rendering: pixelated; }
+.app h2 { margin: 0 0 6px; font-size: 21px; }
+.app p { font-size: 16px; }
+.app .meta { margin-top: auto; padding-top: 4px; }
+.app-links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; font-weight: 600; margin: 0; }
 
 .button { display: inline-block; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; border-radius: 999px; padding: 11px 22px; }
 .button:hover { background: var(--accent-dark); }
 
-.facts { list-style: none; padding: 0; }
-.facts li { position: relative; padding-left: 22px; }
-.facts li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-
-.doc-links { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; padding: 0; font-weight: 600; }
 
 /* Missing facts, filled in before launch (scripts/check-site.py --release fails while any are left) */
 mark.todo { background: #FDE68A; color: #3B2A00; padding: 0 4px; border-radius: 4px; font-weight: 600; }
@@ -72,11 +72,10 @@ mark.todo { background: #FDE68A; color: #3B2A00; padding: 0 4px; border-radius: 
 .site-footer .links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 14px; font-weight: 600; }
 .site-footer address { font-style: normal; }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
   body { font-size: 16px; }
   h1 { font-size: 30px; }
-  .product { flex-direction: column; }
-  .product img { width: 72px; height: 72px; border-radius: 16px; }
+  .apps { grid-template-columns: 1fr; }
 }
 
 @media print {
