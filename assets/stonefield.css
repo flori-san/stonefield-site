@@ -63,6 +63,15 @@ li { margin-bottom: 8px; }
 .button { display: inline-block; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; border-radius: 999px; padding: 11px 22px; }
 .button:hover { background: var(--accent-dark); }
 
+/* Breadcrumbs and document pages (app details, legal) */
+.crumbs { font-size: 14px; color: var(--text-2); margin: 0 0 18px; }
+.app-page img { width: 64px; height: 64px; border-radius: 15px; margin-bottom: 14px; }
+.app-page img.pixel { image-rendering: pixelated; }
+.app-page h1 { margin-bottom: 8px; }
+.app-page .app-links { margin-top: 18px; align-items: center; }
+.legal h2 { margin-top: 32px; }
+.legal .meta { margin-bottom: 24px; }
+
 
 /* Missing facts, filled in before launch (scripts/check-site.py --release fails while any are left) */
 mark.todo { background: #FDE68A; color: #3B2A00; padding: 0 4px; border-radius: 4px; font-weight: 600; }

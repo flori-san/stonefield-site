@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stonefield.app/sitemap.xml
